@@ -15,7 +15,7 @@ class Settings(BaseSettings):
         description="Official Google Gemini API key used by the provider layer"
     )
     GEMINI_MODEL: str = Field(
-        default="gemini-1.5-flash",
+        default="gemini-3.6-flash",
         description="Target Gemini foundational model identifier"
     )
     ENVIRONMENT: str = Field(
@@ -27,7 +27,7 @@ class Settings(BaseSettings):
         description="Application title for OpenAPI docs and logging"
     )
     CORS_ORIGINS: List[str] = Field(
-        default=["http://localhost:3000"],
+        default=["http://localhost:3000", "http://localhost:3001"],
         description="Allowed origins for frontend CORS communication"
     )
     REQUEST_TIMEOUT_SECONDS: float = Field(
